@@ -39,6 +39,5 @@ lengthOfPassword = int(input("How long would you like your password to be: "));
 while lengthOfPassword <= 0:
     lengthOfPassword = int(input("How long would you like your password to be: "));
 
-if lengthOfPassword > 0:
-    print(generatePassword(lengthOfPassword));
+print(generatePassword(lengthOfPassword));
 
