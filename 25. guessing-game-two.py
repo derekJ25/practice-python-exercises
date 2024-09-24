@@ -28,6 +28,4 @@ def startGuessingGame():
             print("Please enter a valid input.");
             userNum = input("Enter too high/too low/correct: ");
     
-    
-
 startGuessingGame();
