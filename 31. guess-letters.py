@@ -28,27 +28,24 @@ def letterIsInWord(word, guess):
             return True;
     return False;
 
-# TODO
 def displayGuess(word, lettersGuessed):
     wordToDisplay = "";
     
     for letter in word.lower():
         if letter in lettersGuessed:
             wordToDisplay += letter;
-            wordToDisplay += "_ ";
+            wordToDisplay += " ";
         else:
             wordToDisplay += "_ ";
     
     print(wordToDisplay);
 
-def startGame():
+if __name__ == '__main__':
     filePath = "practice-python-exercises/files/SOWPODS-dictionary.txt";
-    wordToGuess = "EVAPORATE";
+    words = readFromFile(filePath);
+    wordToGuess = pickRandomWord(words);
     lettersGuessed = set();
     wordSet = set(wordToGuess.lower());
-    
-    words = readFromFile(filePath);
-    # wordToGuess = pickRandomWord(words);
     
     print(wordToGuess);
     
@@ -101,6 +98,3 @@ def startGame():
         # not valid -> display error
             # user is guess letter again
         
-    
-
-startGame();
