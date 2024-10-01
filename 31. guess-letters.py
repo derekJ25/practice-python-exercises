@@ -76,7 +76,7 @@ def startGame():
     # print(validGuess(playerGuess));
     
     while not wordSet.issubset(lettersGuessed):
-        playerGuess = input("\nGuess your letter: ");
+        playerGuess = input("\nGuess your letter: ").lower();
         if validGuess(playerGuess):
             if playerGuess not in lettersGuessed:
                 if letterIsInWord(wordToGuess, playerGuess):
